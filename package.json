@@ -1,10 +1,15 @@
 {
-  "name": "edumentros",
+  "name": "nigchtwatchtestsample",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demonstration project of End-2-End testing using Nightwatch.js and NodeJS",
   "main": "nightwatch.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "debug": "node --inspect-brk node_modules\\nightwatch\\bin\\nightwatch",
+    "all-chrome": "node nightwatch.js -e chrome tests --reporter html-reporter.js",
+    "all-firefox": "node nightwatch.js -e firefox tests --reporter html-reporter.js",
+    "all-edge": "node nightwatch.js -e edge tests --reporter html-reporter.js",
+    "all-safari": "node nightwatch.js -e safari tests --reporter html-reporter.js"
   },
   "author": "Michał Bordoszewski",
   "license": "ISC",
